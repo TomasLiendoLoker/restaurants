@@ -2,8 +2,11 @@ import { ScrollView, StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import Loading from '../../components/Loading'
 import { Button } from 'react-native-elements'
+import {useNavigation} from '@react-navigation/native'
 
 export default function UserGuest() {
+  const navigation=useNavigation()
+
   return (
     //cambiar isVisible a true para ver ActivityIndicator 
     /* <View>
@@ -26,7 +29,7 @@ export default function UserGuest() {
         <Button
             buttonStyle={styles.button}
             title={"Ver tu perfil"}
-            onPress={()=>console.log("Click !!!!")}
+            onPress={()=>navigation.navigate("login")}
           >
         </Button>
 
